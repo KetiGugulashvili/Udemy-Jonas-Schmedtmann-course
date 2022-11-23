@@ -2,10 +2,13 @@
 
 let score0El = document.querySelector('#score--0');
 let score1El = document.querySelector('#score--1');
+
 let diceEl = document.querySelector('.dice');
 let buttons = document.querySelectorAll('.btn');
+
 let currentScore0El = document.getElementById('current--0');
 let currentScore1El = document.getElementById('current--1');
+
 let player0El = document.querySelector('.player--0');
 let player1El = document.querySelector('.player--1');
 
@@ -13,8 +16,10 @@ let scores = [0, 0];
 
 score0El.textContent = 0;
 score1El.textContent = 0;
+
 diceEl.classList.add('hidden');
 let playing = true;
+
 
 //When the player is switching
 function switchPlayer() {
@@ -24,6 +29,7 @@ function switchPlayer() {
   player0El.classList.toggle('player--active');
   player1El.classList.toggle('player--active');
 }
+
 
 let currentScore = 0;
 let activePlayer = 0;
@@ -85,3 +91,7 @@ buttons[0].addEventListener('click', function () {
   score1El.textContent = 0;
   activePlayer = 0;
 });
+
+
+
+
