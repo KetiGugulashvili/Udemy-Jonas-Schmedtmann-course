@@ -1,4 +1,5 @@
 'use strict';
+
 let myNumber = Math.trunc(Math.random() * 50) + 1;
 let score = 10;
 let highscore = 0;
@@ -7,15 +8,18 @@ function displayMessage(message) {
   document.querySelector('.message').textContent = message;
 }
 
+
 document.querySelector('.check').addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
   console.log(guess);
+  
   if (!guess) {
     displayMessage('No Number!');
   } else if (guess === myNumber) {
     displayMessage('🎉 Correct Number!');
     document.querySelector('.number').textContent = myNumber;
     document.querySelector('body').style.backgroundColor = '#60b347';
+    
     if (score > highscore) {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
@@ -35,6 +39,7 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 });
+
 
 document.querySelector('.again').addEventListener('click', function () {
   myNumber = Math.trunc(Math.random() * 50) + 1;
