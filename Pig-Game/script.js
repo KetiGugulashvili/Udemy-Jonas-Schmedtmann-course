@@ -1,4 +1,5 @@
 'use strict';
+
 let score0El = document.querySelector('#score--0');
 let score1El = document.querySelector('#score--1');
 let diceEl = document.querySelector('.dice');
@@ -15,6 +16,7 @@ score1El.textContent = 0;
 diceEl.classList.add('hidden');
 let playing = true;
 
+//When the player is switching
 function switchPlayer() {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   activePlayer = activePlayer === 0 ? 1 : 0;
@@ -67,6 +69,7 @@ buttons[2].addEventListener('click', function () {
     }
   }
 });
+
 
 buttons[0].addEventListener('click', function () {
   document
